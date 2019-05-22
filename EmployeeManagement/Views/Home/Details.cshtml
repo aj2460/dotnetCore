@@ -1,0 +1,36 @@
+﻿@model HomeDetailsViewModel
+
+@{
+   // Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Employee Details";
+}
+
+
+    <div class="row justify-content-center m-3">
+        <div class="col-sm-6">
+            <h4>@Model.PageTitle</h4>
+            <p> <a asp-controller="home" asp-action="index">Back</a></p>
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="~/images/no-image.png" class="card-img" alt="no Image" />
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">@Model.Employee.Name</h5>
+                            <p class="card-text">@Model.Employee.Email</p>
+                            <p class="card-text">@Model.Employee.Department</p>
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+@section Scripts {
+<script src="~/js/CustomScript.js"></script>
+}
